@@ -1,0 +1,1 @@
+(function(){"use strict";var e={};onmessage=t=>{let a=t.data;if(a.name==="clear"){for(const n in e)clearInterval(e[n]),delete e[n];return}a.name in e&&clearInterval(e[a.name]),e[a.name]=setInterval(()=>{self.postMessage(a.name)},a.ms)}})();
